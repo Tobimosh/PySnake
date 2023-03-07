@@ -22,6 +22,9 @@ while game_on:
     screen.update()
     time.sleep(0.1)
     s.movement()
+    
+    if s.segment[0].distance(food) < 15: # To check how close the snake is to the food
+        food.new_location()
 
 
 screen.exitonclick()
