@@ -27,12 +27,24 @@ while game_on:
     
     if snake.segment[0].distance(food) < 15: # To check how close the snake is to the food
         food.new_location()
+        snake.extend()
         scoreboard.increase_score() #increases score after every consumption
 
     # condition for when the snake comes in contact with any part of the walls
     if snake.segment[0].xcor() > 280 or snake.segment[0].xcor() < -280 or snake.segment[0].ycor() > 280 or snake.segment[0].ycor() < -280:
         game_on = False
         scoreboard.game_over()
+
+    # condition for when the snake head bits another part of the snake
+    for seg in snake.segment:
+        if seg == snake.segment[0]:
+            pass
+        elif snake.segment[0].distance(seg) < 10:
+            game_on = False
+            scoreboard.game_over()
+
+
+
 
 
 screen.exitonclick()
