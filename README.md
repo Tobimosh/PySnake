@@ -1,5 +1,5 @@
 # PySnake
-# Welcome to my version of Snake Xenzia!
+# Welcome to my version of Snake Xenzia!🐍
 
 I created this Python game using my knowledge of the Turtle graphics library and object-oriented programming.💡 
 
