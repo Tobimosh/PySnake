@@ -6,7 +6,7 @@ import time
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
-screen.title("MY SNAKE GAME")
+screen.title("MY PYTHON SLITHER")
 screen.tracer(0)
 
 snake = Snake()
@@ -31,7 +31,7 @@ while game_on:
         scoreboard.increase_score() #increases score after every consumption
 
     # condition for when the snake comes in contact with any part of the walls
-    if snake.segment[0].xcor() > 280 or snake.segment[0].xcor() < -280 or snake.segment[0].ycor() > 280 or snake.segment[0].ycor() < -280:
+    if snake.segment[0].xcor() > 290 or snake.segment[0].xcor() < -290 or snake.segment[0].ycor() > 290 or snake.segment[0].ycor() < -290:
         game_on = False
         scoreboard.game_over()
 
@@ -42,9 +42,6 @@ while game_on:
         elif snake.segment[0].distance(seg) < 10:
             game_on = False
             scoreboard.game_over()
-
-
-
 
 
 screen.exitonclick()
